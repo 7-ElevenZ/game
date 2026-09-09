@@ -5,10 +5,12 @@
 [ext_resource type="Texture2D" uid="uid://tagd138wk0dr" path="res://Assets/Sprites/UI/Background.png" id="3_8saeu"]
 [ext_resource type="Shader" uid="uid://yhtkd62mucj4" path="res://Shaders/Brightness.gdshader" id="3_ghw46"]
 [ext_resource type="Texture2D" uid="uid://upjm2fkpvbfb" path="res://Assets/Sprites/UI/Logo.png" id="5_df05h"]
+[ext_resource type="Script" uid="uid://bjm3y4a211bnj" path="res://Scripts/UI/Effects/Logo.cs" id="6_8um5k"]
+[ext_resource type="Script" uid="uid://cwwq2io6efo3v" path="res://Scripts/UI/Effects/ButtonEffects.cs" id="7_xim88"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_df05h"]
 shader = ExtResource("3_ghw46")
-shader_parameter/brightness = -0.149999959625
+shader_parameter/brightness = -0.24999996437500005
 
 [node name="Container" type="CanvasLayer" unique_id=843133638]
 script = ExtResource("1_tt5f1")
@@ -33,27 +35,74 @@ grow_vertical = 2
 texture = ExtResource("3_8saeu")
 expand_mode = 2
 
-[node name="Sidebar" type="MarginContainer" parent="UIRoot" unique_id=1209181527]
+[node name="Middlebar" type="MarginContainer" parent="UIRoot" unique_id=286716495]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.22000001
+anchor_left = 0.305
+anchor_right = 0.69500005
 anchor_bottom = 1.0
-offset_right = -0.4400177
+offset_left = -0.4000244
+offset_right = 0.39990234
+grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_bottom = 7
 
-[node name="Panel" type="Panel" parent="UIRoot/Sidebar" unique_id=1753598831]
+[node name="MiddlebarPanel" type="Panel" parent="UIRoot/Middlebar" unique_id=33183413]
 layout_mode = 2
 
-[node name="Logo" type="TextureRect" parent="UIRoot/Sidebar/Panel" unique_id=1108097284]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 370.0
-offset_bottom = 152.0
+[node name="Logo" type="TextureRect" parent="UIRoot/Middlebar/MiddlebarPanel" unique_id=1108097284]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.071
+anchor_right = 0.5
+anchor_bottom = 0.071
+offset_left = -175.0
+offset_top = -0.12600327
+offset_right = 175.0
+offset_bottom = 131.874
+grow_horizontal = 2
 pivot_offset = Vector2(175, 66)
-offset_transform_enabled = true
 texture = ExtResource("5_df05h")
+script = ExtResource("6_8um5k")
+RotationAmplitude = 1.2
+
+[node name="Buttons" type="VBoxContainer" parent="UIRoot/Middlebar/MiddlebarPanel" unique_id=1044183476]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.178
+anchor_top = 0.43100002
+anchor_right = 0.822
+anchor_bottom = 0.717
+offset_left = -0.008003235
+offset_top = -0.28601074
+offset_right = 0.0079956055
+offset_bottom = 0.29800415
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Play" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=198500847]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Play"
+script = ExtResource("7_xim88")
+
+[node name="Options" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1789010983]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+script = ExtResource("7_xim88")
+
+[node name="Credits" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1757846388]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Credits"
+script = ExtResource("7_xim88")
+
+[node name="Quit" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1755878952]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+script = ExtResource("7_xim88")

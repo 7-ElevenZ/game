@@ -3,12 +3,12 @@ using System;
 
 namespace ElevenZ.Assets
 {
-    public partial class AudioLibrary : Node
+    public static class AudioLibrary
     {
-        private AudioStream _buttonDown;
-        private AudioStream _buttonUp;
+        private static AudioStream _buttonDown;
+        private static AudioStream _buttonUp;
 
-        public AudioStream ButtonDown => _buttonDown ??= GD.Load<AudioStream>("res://Assets/Audio/UI/button-down.wav");
-        public AudioStream ButtonUp => _buttonUp ??= GD.Load<AudioStream>("res://Assets/Audio/UI/button-up.wav");
+        public static AudioStream ButtonDown => _buttonDown ??= GD.Load<AudioStream>("res://Assets/Audio/SoundEffects/UI/button-down.wav");
+        public static AudioStream ButtonUp => _buttonUp ??= GD.Load<AudioStream>("res://Assets/Audio/SoundEffects/UI/button-up.wav");
     }
 }

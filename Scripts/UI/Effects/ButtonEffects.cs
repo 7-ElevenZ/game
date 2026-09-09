@@ -1,6 +1,6 @@
+using ElevenZ.Assets;
 using ElevenZ.Core;
 using Godot;
-using System;
 
 namespace ElevenZ.UI.Effects
 {
@@ -9,10 +9,10 @@ namespace ElevenZ.UI.Effects
         [ExportCategory("Sounds")]
 
         [Export]
-        public AudioStream ButtonDownSound { get; set; }
+        public AudioStream ButtonDownSound { get; set; } = AudioLibrary.ButtonDown;
 
         [Export]
-        public AudioStream ButtonUpSound { get; set; }
+        public AudioStream ButtonUpSound { get; set; } = AudioLibrary.ButtonUp;
 
         [ExportCategory("Tweening")]
 
@@ -25,7 +25,7 @@ namespace ElevenZ.UI.Effects
         private Tween _tween;
         private Vector2 _originalScale;
 
-        public override void _Ready()
+        public override async void _Ready()
         {
             _originalScale = Scale;
 
@@ -34,6 +34,10 @@ namespace ElevenZ.UI.Effects
 
             MouseEntered += OnMouseOver;
             MouseExited += ResetScale;
+
+            await ToSignal(GetTree(), "process_frame");
+
+            PivotOffset = Size / 2;
         }
 
         private void ResetScale()
