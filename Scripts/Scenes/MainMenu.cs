@@ -2,13 +2,16 @@ using ElevenZ.Core;
 using Godot;
 using System;
 
-public partial class MainMenu : CanvasLayer
+namespace ElevenZ.Scenes
 {
-	[Export]
-	public AudioStream MenuSong { get; set; }
-
-	public override void _Ready()
+	public partial class MainMenu : CanvasLayer
 	{
-		AudioManager.Instance.PlayMusic(MenuSong);
+		[Export]
+		public AudioStream MenuSong { get; set; }
+
+		public override void _Ready()
+		{
+			AudioManager.Instance.PlayMusic(MenuSong);
+		}
 	}
 }

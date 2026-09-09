@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bvbjtxd683srf" path="res://Assets/Audio/Music/MainMenu.ogg" id="2_853f1"]
 [ext_resource type="Texture2D" uid="uid://tagd138wk0dr" path="res://Assets/Sprites/UI/Background.png" id="3_8saeu"]
 [ext_resource type="Shader" uid="uid://yhtkd62mucj4" path="res://Shaders/Brightness.gdshader" id="3_ghw46"]
+[ext_resource type="Texture2D" uid="uid://upjm2fkpvbfb" path="res://Assets/Sprites/UI/Logo.png" id="5_df05h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_df05h"]
 shader = ExtResource("3_ghw46")
@@ -31,3 +32,28 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_8saeu")
 expand_mode = 2
+
+[node name="Sidebar" type="MarginContainer" parent="UIRoot" unique_id=1209181527]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.22000001
+anchor_bottom = 1.0
+offset_right = -0.4400177
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Panel" type="Panel" parent="UIRoot/Sidebar" unique_id=1753598831]
+layout_mode = 2
+
+[node name="Logo" type="TextureRect" parent="UIRoot/Sidebar/Panel" unique_id=1108097284]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 370.0
+offset_bottom = 152.0
+pivot_offset = Vector2(175, 66)
+offset_transform_enabled = true
+texture = ExtResource("5_df05h")
