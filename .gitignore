@@ -1,0 +1,10 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# VS Code
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
