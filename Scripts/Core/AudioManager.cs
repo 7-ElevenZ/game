@@ -6,6 +6,14 @@ namespace ElevenZ.Core
 {
     public partial class AudioManager : Node
     {
+        public static AudioManager Instance { get; private set; }
+
+        public override void _Ready()
+        {
+            Instance = this
+        }
+        
+
         [ExportCategory("Nodes")]
 
         [Export]
