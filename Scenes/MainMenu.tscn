@@ -2,6 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c0s0ecxm74tlh" path="res://Scripts/Scenes/MainMenu.cs" id="1_tt5f1"]
 [ext_resource type="AudioStream" uid="uid://bvbjtxd683srf" path="res://Assets/Audio/Music/MainMenu.ogg" id="2_853f1"]
+[ext_resource type="Texture2D" uid="uid://tagd138wk0dr" path="res://Assets/Sprites/UI/Background.png" id="3_8saeu"]
+[ext_resource type="Shader" uid="uid://yhtkd62mucj4" path="res://Shaders/Brightness.gdshader" id="3_ghw46"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_df05h"]
+shader = ExtResource("3_ghw46")
+shader_parameter/brightness = -0.149999959625
 
 [node name="Container" type="CanvasLayer" unique_id=843133638]
 script = ExtResource("1_tt5f1")
@@ -14,3 +20,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UIRoot" unique_id=707992568]
+material = SubResource("ShaderMaterial_df05h")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8saeu")
+expand_mode = 2
