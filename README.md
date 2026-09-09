@@ -3,7 +3,6 @@
 	<h1>7-ElevenZ</h1>
 
 [![Made with Godot][godot-badge]](https://godotengine.org/)
-[![Available on itch.io][itch-badge]](https://demiomad.itch.io/elevenz)
 [![MIT License][license-badge]](https://opensource.org/licenses/MIT)
 </div>
 
