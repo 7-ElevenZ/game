@@ -34,6 +34,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="7-ElevenZ"
 
+[gui]
+
+theme/custom="uid://cry6dnch043it"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
