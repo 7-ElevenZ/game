@@ -12,7 +12,7 @@ namespace ElevenZ.Core
 
         public override void _Ready()
         {
-            Instance = this
+            Instance = this;
         }
 
         public Tween CreateTweenForNode(Node node, Tween.EaseType ease = Tween.EaseType.InOut, Tween.TransitionType trans = Tween.TransitionType.Linear, bool parallel = false)

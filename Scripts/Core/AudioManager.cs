@@ -10,9 +10,9 @@ namespace ElevenZ.Core
 
         public override void _Ready()
         {
-            Instance = this
+            Instance = this;
         }
-        
+
 
         [ExportCategory("Nodes")]
 
