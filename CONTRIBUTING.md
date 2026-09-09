@@ -46,36 +46,11 @@ It will be considered good of quality.
 
 This repository has a [Code of Conduct](CODE_OF_CONDUCT.md), we recommend reading it to get a sense of what we expect from you.
 
-### Does It Use the [Conventional Commits][conventional-commits] Specification?
-
-This is important as it can help make commits more understandable.
-
-Here's a bad example:
-
-```
-Fix README.md
-Fix bug where...
-Fix formatting
-```
-
-This may not clearly explain if it's a code refactor, feature or bugfix.
-
-A good example would be:
-
-```
-docs: fix typo in readme
-fix: fix bug in [file]
-style: fix formatting
-```
-
-We also recommend using a commit body, as that explains *what* you did and *why* you made that change.
-
 ## Local Setup
 
 ### Prerequesites
 - Godot Engine 4.7 or newer (.NET Version): [Download][godot-download]
 - Git
-- (optional) Commitizen
 
 ### Setup
 
@@ -91,4 +66,3 @@ cd 7-ElevenZ
 6. Build the project by clicking the hammer icon in the top, this should restore the necessary .NET packages.
 
 [godot-download]: https://godotengine.org/download
-[conventional-commits]: https://www.conventionalcommits.org/en/v1.0.0/
