@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://co27ephdkehkm"]
 
 [ext_resource type="Script" uid="uid://c0s0ecxm74tlh" path="res://Scripts/Scenes/MainMenu.cs" id="1_tt5f1"]
+[ext_resource type="AudioStream" uid="uid://bvbjtxd683srf" path="res://Assets/Audio/Music/MainMenu.ogg" id="2_853f1"]
 
 [node name="Container" type="CanvasLayer" unique_id=843133638]
 script = ExtResource("1_tt5f1")
+MenuSong = ExtResource("2_853f1")
 
 [node name="UIRoot" type="Control" parent="." unique_id=1730031477]
 layout_mode = 3

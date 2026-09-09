@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://brpqv31s6ia2j" path="res://Scripts/Core/AudioManager.cs" id="1_7axng"]
 
-[node name="AudioManager" type="Node" unique_id=1614167789]
+[node name="AudioManager" type="Node" unique_id=1614167789 node_paths=PackedStringArray("MusicPlayer", "SoundPlayer")]
 script = ExtResource("1_7axng")
+MusicPlayer = NodePath("Music")
+SoundPlayer = NodePath("Sounds")
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1066339965]
 bus = &"Music"
