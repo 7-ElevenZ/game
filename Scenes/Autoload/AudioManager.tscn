@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dcsfobwhswjxw"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_uhtnn"]
+script/source = "using Godot;
+using System;
+
+// Manages the game's audio.
+public partial class AudioManager : Node
+{
+}
+"
+
+[node name="AudioManager" type="Node" unique_id=1614167789]
+script = SubResource("CSharpScript_uhtnn")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1066339965]
+bus = &"Music"
+
+[node name="Sounds" type="AudioStreamPlayer" parent="." unique_id=365057089]
+bus = &"Sounds"
