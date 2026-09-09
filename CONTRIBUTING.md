@@ -37,7 +37,7 @@ Tells us the problem that you have found, and the pull request shows us the acti
 As long as:
 - It follows the project's existing naming conventions and doesn't introduce new spelling errors in user-facing text (UI, error messages)
 - The code is well formatted (if it's a code change)
-- The commits aren't a mess, [Read here](#does-it-use-the-conventional-commits-specification) for more information.
+- The commits aren't a mess
 
 It will be considered good of quality.
 
