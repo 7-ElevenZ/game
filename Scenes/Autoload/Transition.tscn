@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cbjbasqj6pymk"]
+
+[sub_resource type="Animation" id="Animation_yuj20"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:pivot_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3ke2m"]
+resource_name = "TransitionEnd"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:pivot_offset_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7406354, 1), Vector2(0.530509, 1), Vector2(0.36443788, 1), Vector2(0.237239, 1), Vector2(0.14372957, 1), Vector2(0.07872641, 1), Vector2(0.03704667, 1), Vector2(0.013507366, 1), Vector2(0.0029254556, 1), Vector2(0.0001180172, 1), Vector2(1e-05, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p327u"]
+resource_name = "TransitionStart"
+length = 0.35
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3, 0.33333334, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1), Vector2(0.00087382924, 1), Vector2(0.006920634, 1), Vector2(0.023333386, 1), Vector2(0.05529507, 1), Vector2(0.10798863, 1), Vector2(0.18659708, 1), Vector2(0.29630336, 1), Vector2(0.44229057, 1), Vector2(0.6297415, 1), Vector2(0.8638391, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:pivot_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3g32a"]
+_data = {
+&"RESET": SubResource("Animation_yuj20"),
+&"TransitionEnd": SubResource("Animation_3ke2m"),
+&"TransitionStart": SubResource("Animation_p327u")
+}
+
+[node name="Container" type="CanvasLayer" unique_id=460261908]
+
+[node name="UIRoot" type="Control" parent="." unique_id=1038457310]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BlackThing" type="ColorRect" parent="UIRoot" unique_id=1419318124]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1)
+pivot_offset_ratio = Vector2(1, 0)
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UIRoot/BlackThing" unique_id=591473851]
+libraries/ = SubResource("AnimationLibrary_3g32a")
