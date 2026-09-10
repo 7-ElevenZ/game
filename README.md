@@ -6,6 +6,9 @@
 [![MIT License][license-badge]](https://opensource.org/licenses/MIT)
 </div>
 
+> [!NOTE]
+> This has not been finished yet.
+
 **7-ElevenZ** (formerly *ElevenZ: The Game*) is a game where you can *"stream"* to your *"viewers"*.
 
 [godot-badge]: https://img.shields.io/badge/made_with-Godot_Engine-blue?logo=godot-engine&logoColor=white
