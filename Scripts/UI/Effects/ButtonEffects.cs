@@ -37,7 +37,7 @@ namespace ElevenZ.UI.Effects
 
             await ToSignal(GetTree(), "process_frame");
 
-            PivotOffset = Size / 2;
+            PivotOffsetRatio = new Vector2(0.5f, 0.5f);
         }
 
         private void ResetScale()
