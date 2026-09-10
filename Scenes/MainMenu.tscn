@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://co27ephdkehkm"]
 
 [ext_resource type="Script" uid="uid://c0s0ecxm74tlh" path="res://Scripts/Scenes/MainMenu.cs" id="1_tt5f1"]
-[ext_resource type="AudioStream" uid="uid://bvbjtxd683srf" path="res://Assets/Audio/Music/MainMenu.ogg" id="2_853f1"]
 [ext_resource type="Texture2D" uid="uid://tagd138wk0dr" path="res://Assets/Sprites/UI/Background.png" id="3_8saeu"]
 [ext_resource type="Shader" uid="uid://yhtkd62mucj4" path="res://Shaders/Brightness.gdshader" id="3_ghw46"]
 [ext_resource type="Texture2D" uid="uid://upjm2fkpvbfb" path="res://Assets/Sprites/UI/Logo.png" id="5_df05h"]
@@ -12,9 +11,9 @@
 shader = ExtResource("3_ghw46")
 shader_parameter/brightness = -0.24999996437500005
 
-[node name="Container" type="CanvasLayer" unique_id=843133638]
+[node name="Container" type="CanvasLayer" unique_id=843133638 node_paths=PackedStringArray("QuitButton")]
 script = ExtResource("1_tt5f1")
-MenuSong = ExtResource("2_853f1")
+QuitButton = NodePath("UIRoot/Middlebar/MiddlebarPanel/Buttons/Quit")
 
 [node name="UIRoot" type="Control" parent="." unique_id=1730031477]
 layout_mode = 3
@@ -76,33 +75,30 @@ anchor_top = 0.43100002
 anchor_right = 0.822
 anchor_bottom = 0.717
 offset_left = -0.008003235
-offset_top = -0.28601074
+offset_top = -21.53601
 offset_right = 0.0079956055
-offset_bottom = 0.29800415
+offset_bottom = 21.548004
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 15
+alignment = 1
 
 [node name="Play" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=198500847]
 layout_mode = 2
-size_flags_vertical = 3
 text = "Play"
 script = ExtResource("7_xim88")
 
 [node name="Options" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1789010983]
 layout_mode = 2
-size_flags_vertical = 3
 text = "Options"
 script = ExtResource("7_xim88")
 
 [node name="Credits" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1757846388]
 layout_mode = 2
-size_flags_vertical = 3
 text = "Credits"
 script = ExtResource("7_xim88")
 
 [node name="Quit" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1755878952]
 layout_mode = 2
-size_flags_vertical = 3
 text = "Quit"
 script = ExtResource("7_xim88")

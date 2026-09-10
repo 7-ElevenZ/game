@@ -25,6 +25,7 @@ buses/default_bus_layout="res://Resources/AudioBusLayout.tres"
 
 AudioManager="*uid://dcsfobwhswjxw"
 TweenManager="*uid://d02te88i8w42c"
+GameManager="*uid://b701qwebctf2"
 
 [display]
 
