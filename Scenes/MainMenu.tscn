@@ -92,7 +92,7 @@ script = ExtResource("7_xim88")
 [node name="Options" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1789010983]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Quit"
+text = "Options"
 script = ExtResource("7_xim88")
 
 [node name="Credits" type="Button" parent="UIRoot/Middlebar/MiddlebarPanel/Buttons" unique_id=1757846388]
