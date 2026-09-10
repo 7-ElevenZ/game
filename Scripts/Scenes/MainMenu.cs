@@ -1,7 +1,6 @@
 using ElevenZ.Assets;
 using ElevenZ.Core;
 using Godot;
-using System;
 
 namespace ElevenZ.Scenes
 {
@@ -32,7 +31,7 @@ namespace ElevenZ.Scenes
 				QuitButton.Pressed += GameManager.Instance.QuitGame;
 		}
 
-        public override void _Ready()
+        public override async void _Ready()
         {
             if (MenuSong == null)
             {
