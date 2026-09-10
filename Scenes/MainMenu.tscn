@@ -11,6 +11,13 @@
 shader = ExtResource("3_ghw46")
 shader_parameter/brightness = -0.24999996437500005
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ke2m"]
+bg_color = Color(0.1254902, 0.1254902, 0.1254902, 0.49803922)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
 [node name="Container" type="CanvasLayer" unique_id=843133638 node_paths=PackedStringArray("QuitButton")]
 script = ExtResource("1_tt5f1")
 QuitButton = NodePath("UIRoot/Middlebar/MiddlebarPanel/Buttons/Quit")
@@ -49,6 +56,7 @@ theme_override_constants/margin_bottom = 7
 
 [node name="MiddlebarPanel" type="Panel" parent="UIRoot/Middlebar" unique_id=33183413]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ke2m")
 
 [node name="Logo" type="TextureRect" parent="UIRoot/Middlebar/MiddlebarPanel" unique_id=1108097284]
 layout_mode = 1
