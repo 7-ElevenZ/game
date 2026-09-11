@@ -6,10 +6,7 @@ namespace ElevenZ.Scenes
 {
     public partial class MainMenu : CanvasLayer
     {
-		[ExportCategory("Audio")]
-
-        [Export]
-        public AudioStream MenuSong { get; set; } = AudioLibrary.MenuTheme;
+        public AudioStream MenuSong { get; set; }
 
 
 		[ExportCategory("Buttons")]
@@ -33,11 +30,7 @@ namespace ElevenZ.Scenes
 
         public override async void _Ready()
         {
-            if (MenuSong == null)
-            {
-                GD.PushWarning("Menu song was not attached in the Inspector.");
-                return;
-            }
+            MenuSong ??= GameResourceManager.Instance.GetResource<AudioStream>("menu");
 
             AudioManager.Instance.PlayMusic(MenuSong);
 

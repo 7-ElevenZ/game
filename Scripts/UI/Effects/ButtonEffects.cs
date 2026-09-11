@@ -6,13 +6,9 @@ namespace ElevenZ.UI.Effects
 {
     public partial class ButtonEffects : Button
     {
-        [ExportCategory("Sounds")]
+        public AudioStream ButtonDownSound { get; set; }
+        public AudioStream ButtonUpSound { get; set; }
 
-        [Export]
-        public AudioStream ButtonDownSound { get; set; } = AudioLibrary.ButtonDown;
-
-        [Export]
-        public AudioStream ButtonUpSound { get; set; } = AudioLibrary.ButtonUp;
 
         [ExportCategory("Tweening")]
 
@@ -27,6 +23,9 @@ namespace ElevenZ.UI.Effects
 
         public override async void _Ready()
         {
+            ButtonDownSound ??= GameResourceManager.Instance.GetResource<AudioStream>("btn_down");
+            ButtonUpSound ??= GameResourceManager.Instance.GetResource<AudioStream>("btn_up");
+
             _originalScale = Scale;
 
             ButtonDown += OnButtonDown;

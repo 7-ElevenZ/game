@@ -12,7 +12,7 @@ config_version=5
 
 config/name="7-ElevenZ"
 config/version="2026.0.0"
-run/main_scene="uid://co27ephdkehkm"
+run/main_scene="uid://bt5d80vto8f2g"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
@@ -23,10 +23,11 @@ buses/default_bus_layout="res://Resources/AudioBusLayout.tres"
 
 [autoload]
 
+GameResourceManager="*uid://ca4imu3gtycsc"
+GameManager="*uid://b701qwebctf2"
 Transition="*uid://cbjbasqj6pymk"
 AudioManager="*uid://dcsfobwhswjxw"
 TweenManager="*uid://d02te88i8w42c"
-GameManager="*uid://b701qwebctf2"
 
 [display]
 
