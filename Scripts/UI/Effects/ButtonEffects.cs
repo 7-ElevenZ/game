@@ -23,6 +23,8 @@ namespace ElevenZ.UI.Effects
 
         public override async void _Ready()
         {
+            MouseDefaultCursorShape = CursorShape.PointingHand;
+            
             ButtonDownSound ??= GameResourceManager.Instance.GetResource<AudioStream>("btn_down");
             ButtonUpSound ??= GameResourceManager.Instance.GetResource<AudioStream>("btn_up");
 

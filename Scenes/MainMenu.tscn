@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c0s0ecxm74tlh" path="res://Scripts/Scenes/MainMenu.cs" id="1_tt5f1"]
 [ext_resource type="Texture2D" uid="uid://tagd138wk0dr" path="res://Assets/Sprites/UI/Background.png" id="3_8saeu"]
 [ext_resource type="Shader" uid="uid://yhtkd62mucj4" path="res://Shaders/Brightness.gdshader" id="3_ghw46"]
+[ext_resource type="Script" uid="uid://gmdj0r0ryslt" path="res://Scenes/MiddlebarGrabber.cs" id="4_xim88"]
 [ext_resource type="Texture2D" uid="uid://upjm2fkpvbfb" path="res://Assets/Sprites/UI/Logo.png" id="5_df05h"]
 [ext_resource type="Script" uid="uid://bjm3y4a211bnj" path="res://Scripts/UI/Effects/Logo.cs" id="6_8um5k"]
 [ext_resource type="Script" uid="uid://cwwq2io6efo3v" path="res://Scripts/UI/Effects/ButtonEffects.cs" id="7_xim88"]
@@ -57,6 +58,17 @@ theme_override_constants/margin_bottom = 7
 [node name="MiddlebarPanel" type="Panel" parent="UIRoot/Middlebar" unique_id=33183413]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_3ke2m")
+
+[node name="Grabber" type="Control" parent="UIRoot/Middlebar/MiddlebarPanel" unique_id=1514640163 node_paths=PackedStringArray("Middlebar")]
+anchors_preset = 0
+offset_right = 500.0
+offset_bottom = 29.0
+mouse_filter = 1
+mouse_default_cursor_shape = 13
+script = ExtResource("4_xim88")
+Middlebar = NodePath("../..")
+Smoothness = 15.0
+Margin = 10
 
 [node name="Logo" type="TextureRect" parent="UIRoot/Middlebar/MiddlebarPanel" unique_id=1108097284]
 layout_mode = 1
