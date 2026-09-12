@@ -46,6 +46,7 @@ project/assembly_name="7-ElevenZ"
 [gui]
 
 theme/custom="uid://cry6dnch043it"
+theme/custom_font="uid://d2uhhheqxhnlh"
 
 [physics]
 
