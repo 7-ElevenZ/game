@@ -8,3 +8,6 @@
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Binaries
+bin/
