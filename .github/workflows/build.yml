@@ -11,9 +11,17 @@ jobs:
         name: Build for Windows and Linux
         runs-on: ubuntu-latest
 
+        permissions:
+          contents: write
+
         steps:
             - name: Checkout repo
               uses: actions/checkout@v7
+
+            - name: Setuo .NET
+              uses: actions/setup-dotnet@v6
+              with:
+                dotnet-version: '8.0.x'
 
             - name: Export the game
               id: export
@@ -25,11 +33,13 @@ jobs:
                 archive_output: true
 
             - name: Create release
-              uses: softprops/action-gh-release@v2
+              uses: softprops/action-gh-release@v3
               with:
                 body: "THIS IS A TEST RELEASE"
                 tag_name: "test"
-                name: "Test release"
+                name: ${{ github.sha }}
                 draft: false
                 prerelease: true
-                files: ./bin/windows/
+                files: 
+                  /home/runner/.local/share/godot/archives/Linux.zip |
+                  /home/runner/.local/share/godot/archives/Windows.zip
