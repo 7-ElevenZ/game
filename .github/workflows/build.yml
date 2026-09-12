@@ -1,0 +1,35 @@
+name: Build
+
+on:
+    workflow_dispatch:
+    push:
+        tags:
+            - "v*.*.*"
+
+jobs:
+    build-linux:
+        name: Build for Windows and Linux
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v7
+
+            - name: Export the game
+              id: export
+              uses: firebelley/godot-export@v8.0.0
+              with:
+                godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_mono_linux_x86_64.zip
+                godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_mono_export_templates.tpz
+                relative_project_path: ./
+                archive_output: true
+
+            - name: Create release
+              uses: softprops/action-gh-release@v2
+              with:
+                body: "THIS IS A TEST RELEASE"
+                tag_name: "test"
+                name: "Test release"
+                draft: false
+                prerelease: true
+                files: ./bin/windows/
