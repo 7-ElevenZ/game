@@ -8,14 +8,14 @@ namespace ElevenZ.Core
     {
         public static GameManager Instance { get; private set; }
 
-        public override void _Ready()
+        public override async void _Ready()
         {
             Instance = this;
         }
 
-        public void QuitGame() // so i dont have to call GetTree().Quit() every time i want to quit
+        public void QuitGame()
         {
-            GetTree().Quit();
+            GetTree().Root.PropagateNotification((int)NotificationWMCloseRequest);
         }
     }
 }

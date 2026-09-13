@@ -32,6 +32,7 @@ GameManager="*uid://b701qwebctf2"
 Transition="*uid://cbjbasqj6pymk"
 AudioManager="*uid://dcsfobwhswjxw"
 TweenManager="*uid://d02te88i8w42c"
+ConfigManager="*uid://i0ubfc1c4hgl"
 
 [display]
 
