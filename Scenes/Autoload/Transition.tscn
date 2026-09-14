@@ -80,10 +80,10 @@ _data = {
 &"TransitionStart": SubResource("Animation_p327u")
 }
 
-[node name="Container" type="CanvasLayer" unique_id=460261908 node_paths=PackedStringArray("AnimationPlayer")]
-layer = 999
+[node name="Container" type="CanvasLayer" unique_id=460261908 node_paths=PackedStringArray("AnimPlayer")]
+layer = 1000
 script = ExtResource("1_3ke2m")
-AnimationPlayer = NodePath("UIRoot/BlackThing/AnimationPlayer")
+AnimPlayer = NodePath("UIRoot/BlackThing/AnimationPlayer")
 
 [node name="UIRoot" type="Control" parent="." unique_id=1038457310]
 layout_mode = 3

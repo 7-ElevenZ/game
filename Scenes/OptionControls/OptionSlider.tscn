@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://brd56uj3ff3l1"]
+
+[ext_resource type="Script" uid="uid://cujgkvaa6twl6" path="res://Scripts/UI/Controls/OptionSlider.cs" id="1_wcxj0"]
+
+[node name="OptionSlider" type="Control" unique_id=754831094 node_paths=PackedStringArray("_label", "_slider")]
+custom_minimum_size = Vector2(0, 21)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.029000001
+offset_bottom = 0.11999893
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wcxj0")
+_label = NodePath("Container/Label")
+_slider = NodePath("Container/Slider")
+
+[node name="Container" type="HBoxContainer" parent="." unique_id=331746238]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 20.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Container" unique_id=1845476503]
+layout_mode = 2
+text = "Label"
+
+[node name="Slider" type="HSlider" parent="Container" unique_id=2074795139]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05

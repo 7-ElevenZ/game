@@ -29,10 +29,12 @@ buses/default_bus_layout="res://Resources/AudioBusLayout.tres"
 
 GameResourceManager="*uid://ca4imu3gtycsc"
 GameManager="*uid://b701qwebctf2"
+OverlayManager="*uid://dsa5q7igb6vsf"
 Transition="*uid://cbjbasqj6pymk"
 AudioManager="*uid://dcsfobwhswjxw"
 TweenManager="*uid://d02te88i8w42c"
 ConfigManager="*uid://i0ubfc1c4hgl"
+NotificationManager="*uid://do585bs6gyd6l"
 
 [display]
 

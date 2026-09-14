@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cu0vshmmduujq"]
+
+[ext_resource type="Script" uid="uid://qeg30bi1wp1v" path="res://Scripts/Overlays/Notification.cs" id="1_03qq4"]
+[ext_resource type="FontFile" uid="uid://d2uhhheqxhnlh" path="res://Assets/Fonts/Quicksand.ttf" id="2_yr1vt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odh8h"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+
+[sub_resource type="FontVariation" id="FontVariation_n7mhc"]
+base_font = ExtResource("2_yr1vt")
+variation_opentype = {
+2003265652: 700
+}
+variation_transform = Transform2D(1, 0.2, 0, 1, 0, 0)
+
+[sub_resource type="FontVariation" id="FontVariation_ytxjj"]
+base_font = ExtResource("2_yr1vt")
+variation_opentype = {
+2003265652: 700
+}
+variation_transform = Transform2D(1, 0.2, 0, 1, 0, 0)
+
+[node name="Container" type="CanvasLayer" unique_id=73398087 node_paths=PackedStringArray("TitleLabel", "ContentLabel", "MainPanel")]
+layer = 999
+script = ExtResource("1_03qq4")
+TitleLabel = NodePath("UIRoot/MainPanel/Title")
+ContentLabel = NodePath("UIRoot/MainPanel/Content")
+MainPanel = NodePath("UIRoot/MainPanel")
+
+[node name="UIRoot" type="Control" parent="." unique_id=968163519]
+layout_mode = 3
+anchor_left = 0.827
+anchor_right = 1.0
+anchor_bottom = 0.135
+offset_left = -5.5600586
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 4.7999954
+grow_horizontal = 0
+
+[node name="MainPanel" type="Panel" parent="UIRoot" unique_id=2055541673]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.33800003
+anchor_right = 1.0
+anchor_bottom = 1.371
+offset_left = 0.036003113
+offset_bottom = 0.013000488
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_odh8h")
+
+[node name="Title" type="Label" parent="UIRoot/MainPanel" unique_id=2105104300]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.038000003
+anchor_right = 0.017
+anchor_bottom = 0.038000003
+offset_left = -0.049000263
+offset_top = -0.054000378
+offset_right = 129.951
+offset_bottom = 19.946
+text = "Notification Title"
+
+[node name="Content" type="RichTextLabel" parent="UIRoot/MainPanel" unique_id=857813574]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.054
+anchor_right = 0.98300004
+anchor_bottom = 0.95500004
+offset_left = -0.049000263
+offset_top = 23.818
+offset_right = 0.048980713
+offset_bottom = -0.015007019
+theme_override_fonts/bold_italics_font = SubResource("FontVariation_n7mhc")
+theme_override_fonts/italics_font = SubResource("FontVariation_ytxjj")
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
+theme_override_font_sizes/bold_italics_font_size = 10
+theme_override_font_sizes/italics_font_size = 10
+theme_override_font_sizes/mono_font_size = 10
+bbcode_enabled = true
+text = "Content"

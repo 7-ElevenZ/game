@@ -15,22 +15,22 @@ namespace ElevenZ.Scenes
 
 
 		[Export]
-		public AnimationPlayer AnimationPlayer { get; set; }
+		public AnimationPlayer AnimPlayer { get; set; }
 
 		private async Task SceneTransition(Action sceneChanger)
 		{
-			if (AnimationPlayer == null)
+			if (AnimPlayer == null)
 			{
 				GD.PushWarning("Animation player was not attached in the Inspector.");
 				return;
 			}
 
-			AnimationPlayer.Play("TransitionStart");
-			await ToSignal(AnimationPlayer, "animation_finished");
+			AnimPlayer.Play("TransitionStart");
+			await ToSignal(AnimPlayer, AnimationMixer.SignalName.AnimationFinished);
 
 			sceneChanger.Invoke();
 
-			AnimationPlayer.Play("TransitionEnd");
+			AnimPlayer.Play("TransitionEnd");
 		}
 
 		public async Task ChangeScene(string path)

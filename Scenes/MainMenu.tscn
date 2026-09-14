@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c0s0ecxm74tlh" path="res://Scripts/Scenes/MainMenu.cs" id="1_tt5f1"]
 [ext_resource type="Texture2D" uid="uid://tagd138wk0dr" path="res://Assets/Sprites/UI/Background.png" id="3_8saeu"]
 [ext_resource type="Shader" uid="uid://yhtkd62mucj4" path="res://Shaders/Brightness.gdshader" id="3_ghw46"]
-[ext_resource type="Script" uid="uid://gmdj0r0ryslt" path="res://Scenes/MiddlebarGrabber.cs" id="4_xim88"]
+[ext_resource type="Script" uid="uid://gmdj0r0ryslt" path="res://Scripts/UI/MiddlebarGrabber.cs" id="4_xim88"]
 [ext_resource type="Texture2D" uid="uid://upjm2fkpvbfb" path="res://Assets/Sprites/UI/Logo.png" id="5_df05h"]
 [ext_resource type="Script" uid="uid://bjm3y4a211bnj" path="res://Scripts/UI/Effects/Logo.cs" id="6_8um5k"]
 [ext_resource type="Script" uid="uid://cwwq2io6efo3v" path="res://Scripts/UI/Effects/ButtonEffects.cs" id="7_xim88"]
@@ -19,8 +19,9 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="Container" type="CanvasLayer" unique_id=843133638 node_paths=PackedStringArray("QuitButton")]
+[node name="Container" type="CanvasLayer" unique_id=843133638 node_paths=PackedStringArray("OptionsButton", "QuitButton")]
 script = ExtResource("1_tt5f1")
+OptionsButton = NodePath("UIRoot/Middlebar/MiddlebarPanel/Buttons/Options")
 QuitButton = NodePath("UIRoot/Middlebar/MiddlebarPanel/Buttons/Quit")
 
 [node name="UIRoot" type="Control" parent="." unique_id=1730031477]

@@ -6,6 +6,11 @@
 script = ExtResource("1_7axng")
 MusicPlayer = NodePath("Music")
 SoundPlayer = NodePath("Sounds")
+BusNames = Dictionary[int, String]({
+0: "Master",
+1: "Music",
+2: "Sounds"
+})
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1066339965]
 bus = &"Music"

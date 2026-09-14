@@ -36,7 +36,7 @@ namespace ElevenZ.UI.Effects
             MouseEntered += OnMouseOver;
             MouseExited += ResetScale;
 
-            await ToSignal(GetTree(), "process_frame");
+            await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
 
             PivotOffsetRatio = new Vector2(0.5f, 0.5f);
         }

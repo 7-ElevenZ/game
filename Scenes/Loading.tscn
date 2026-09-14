@@ -8,7 +8,10 @@ script = ExtResource("1_0s034")
 ResourcesToLoad = Dictionary[String, String]({
 "btn_down": "res://Assets/Audio/SoundEffects/UI/ButtonDown.wav",
 "btn_up": "res://Assets/Audio/SoundEffects/UI/ButtonUp.wav",
-"menu": "res://Assets/Audio/Music/MainMenu.ogg"
+"menu": "res://Assets/Audio/Music/MainMenu.ogg",
+"notification": "res://Scenes/Overlays/Notification.tscn",
+"notification_snd": "res://Assets/Audio/SoundEffects/UI/Notification.wav",
+"options": "res://Scenes/Overlays/Options.tscn"
 })
 ProgressBar = NodePath("UIRoot/Progress")
 TargetScene = ExtResource("2_dhtv6")
@@ -38,7 +41,7 @@ anchor_top = 0.93700004
 anchor_right = 0.78700006
 anchor_bottom = 0.99200004
 offset_left = -0.14001465
-offset_top = 0.35998535
+offset_top = 6.3599854
 offset_right = 0.13989258
 offset_bottom = -0.24005127
 grow_horizontal = 2
