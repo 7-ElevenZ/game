@@ -10,7 +10,6 @@ ResourcesToLoad = Dictionary[String, String]({
 "btn_up": "res://Assets/Audio/SoundEffects/UI/ButtonUp.wav",
 "menu": "res://Assets/Audio/Music/MainMenu.ogg",
 "notification": "res://Scenes/Overlays/Notification.tscn",
-"notification_snd": "res://Assets/Audio/SoundEffects/UI/Notification.wav",
 "options": "res://Scenes/Overlays/Options.tscn"
 })
 ProgressBar = NodePath("UIRoot/Progress")
